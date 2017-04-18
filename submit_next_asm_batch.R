@@ -6,7 +6,7 @@ batch = as.numeric(args[2])
 batch_flags <- c('--nomse --nompe --fewdata', '--nomse --nompe')[batch]
 asm_script <- c('$TROOT/C_contig_assembly/2_SOAP.sh', '$TROOT/C_contig_assembly/2_SOAP.sh')[batch]
 
-scf_file <- paste0(troot,'/stats/assemblies/',sp,'_scfs.tsv')
+scf_file <- paste0('stats/assemblies/',sp,'_scfs.tsv')
 scf_asm <- read.table(scf_file, header = T)
 
 if(batch == 1){
