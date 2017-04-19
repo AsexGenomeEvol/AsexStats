@@ -14,24 +14,26 @@ if(batch == 1){
                              scf_asm$fewdata == T &
                              scf_asm$mse == F &
                              scf_asm$pse == T &
-                             scf_asm$mpe == F, ]
+                             scf_asm$mpe == F &
+                             scf_asm$soft == 'SOAP', ]
 } else if(batch == 2){
     scf_asm_batch <- scf_asm[scf_asm$fasteris == F &
                              scf_asm$fewdata == F &
                              scf_asm$mse == F &
                              scf_asm$pse == T &
-                             scf_asm$mpe == F, ]
+                             scf_asm$mpe == F &
+                             scf_asm$soft == 'SOAP', ]
 }
 
 setwd(paste0('data/', sp, '/assembly/logs'))
 
-if(nrow(scf_asm_batch[, ]) == 0){
+if(nrow(scf_asm_batch) == 0){
   if(batch < 3){
     soap_asm <- scf_asm[scf_asm$soft == 'SOAP',]
     kmer <- soap_asm[which.max(soap_asm[,'NG50']),'kmer']
   } else {
-    abyss_asm <- scf_asm[scf_asm$soft == 'abyss',]
-    kmer <- abyss_asm[which.max(abyss_asm[,'NG50']),'kmer']
+    write('Not implemented', stderr())
+    quit(status = 1)
   }
 
   write(paste('Submiting assembly from batch', batch, ' with kmer', kmer, '; flags:', batch_flags), stderr())
@@ -56,7 +58,9 @@ if(opt_k != min(scf_asm_batch$kmer) & opt_k != max(scf_asm_batch$kmer)){
     write(paste('N50:', scf_asm_batch$N50[opt_asm],
                 'NG50:', scf_asm_batch$NG50[opt_asm],
                 '; total length:', scf_asm_batch$total_sum[opt_asm]), stderr())
-    quit(status = 0)
+    cat(0)
+    quit()
 }
 
-quit(status = 1)
+write('Not converged yeat', stderr())
+cat(1)
