@@ -1,3 +1,5 @@
+source(paste0(Sys.getenv("TROOT"), '/scripts/R/get_optimal_asm.R'))
+
 sp = commandArgs(trailingOnly=TRUE)[1]
 
 scf_file <- paste0('stats/assemblies/',sp,'_scfs.tsv')
@@ -8,8 +10,8 @@ ctg_asm <- read.table(ctg_file, header = T)
 
 all_dir <- unique(c(as.character(scf_asm$dir), as.character(ctg_asm$dir)))
 
-opt <- c(as.character(scf_asm$dir[which.max(scf_asm$NG50)]),
-         as.character(ctg_asm$dir[which.max(ctg_asm$NG50)]))
+opt <- c(as.character(scf_asm$dir[get_opt_asm(scf_asm)]),
+         as.character(ctg_asm$dir[get_opt_asm(ctg_asm)]))
 
 suboptimal <- all_dir[!(all_dir %in% opt)]
 present <- dir(paste0('data/',sp,'/assembly/'))
