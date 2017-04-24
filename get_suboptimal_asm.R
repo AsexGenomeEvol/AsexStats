@@ -22,13 +22,18 @@ opt <- c(as.character(scf_asm$dir[get_opt_asm(scf_asm)]),
 
 suboptimal <- all_dir[!(all_dir %in% opt)]
 present <- dir(paste0('data/',sp,'/assembly/'))
-
 suboptimal_present <- suboptimal[suboptimal %in% present]
 
-write(sp, stderr())
-write(paste("Keeping (ctg):", opt[1], scf_asm[scf_asm$dir == opt[1],'NG50']), stderr())
-write(paste("Keeping (scf):", opt[2], ctg_asm[ctg_asm$dir == opt[2],'NG50']), stderr())
-write(paste("Keeping (batch1):", opt[3], scf_asm_b1[scf_asm_b1$dir == opt[3],'NG50']), stderr())
-write(paste("Keeping (batch2):", opt[4], scf_asm_b2[scf_asm_b2$dir == opt[4],'NG50']), stderr())
-write(paste("Keeping (batch3):", opt[5], scf_asm_b3[scf_asm_b3$dir == opt[5],'NG50']), stderr())
+opt_categories <- c('ctgs', 'scfs', paste0('batch', 1:3))
+all_asm <- list(scf_asm, ctg_asm, scf_asm_b1, scf_asm_b2, scf_asm_b3)
+
+write(paste('sp', 'asm', 'batch', 'N50', 'NG50', 'total_sum', 'score', sep = '\t'), stderr())
+for(i in 1:5){
+  asm <- all_asm[[i]]
+  optimal_asm <- asm$dir == opt[i]
+  write(paste(sp, opt[i], opt_categories[i], asm[optimal_asm,'N50'], asm[optimal_asm,'NG50'],
+              asm[optimal_asm,'total_sum'], round(asm[optimal_asm,'score'], 4), sep = '\t'),
+        stderr())
+}
+
 cat(paste(suboptimal_present, collapse = " "))
