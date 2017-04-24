@@ -1,4 +1,5 @@
 source(paste0(Sys.getenv("TROOT"), '/scripts/R/get_optimal_asm.R'))
+source(paste0(Sys.getenv("TROOT"), '/scripts/R/batch_subset.R'))
 
 args <- commandArgs(trailingOnly=TRUE)
 
@@ -11,21 +12,9 @@ asm_script <- c('$TROOT/C_contig_assembly/2_SOAP.sh', '$TROOT/C_contig_assembly/
 scf_file <- paste0('stats/assemblies/',sp,'_scfs.tsv')
 scf_asm <- read.table(scf_file, header = T)
 
-if(batch == 1){
-    scf_asm_batch <- scf_asm[scf_asm$fasteris == F &
-                             scf_asm$fewdata == T &
-                             scf_asm$mse == F &
-                             scf_asm$pse == T &
-                             scf_asm$mpe == F &
-                             scf_asm$soft == 'SOAP', ]
-} else if(batch == 2){
-    scf_asm_batch <- scf_asm[scf_asm$fasteris == F &
-                             scf_asm$fewdata == F &
-                             scf_asm$mse == F &
-                             scf_asm$pse == T &
-                             scf_asm$mpe == F &
-                             scf_asm$soft == 'SOAP', ]
-}
+# take a subset of assemblies of specified batch;
+# fction in scripts/R/batch_subset.R;
+scf_asm_batch <- batch_subset(scf_asm, batch)
 
 setwd(paste0('data/', sp, '/assembly/logs'))
 
