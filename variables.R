@@ -6,3 +6,6 @@ timemas <- c("1_Tdi", "1_Tps",
              "3_Tms", "3_Tce",
              "4_Tte", "4_Tbi",
              "5_Tge", "5_Tpa")
+
+sex_red <- "#D6604DED"
+asex_blue <- "#92C5DECD"
