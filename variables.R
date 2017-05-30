@@ -9,3 +9,15 @@ timemas <- c("1_Tdi", "1_Tps",
 
 sex_red <- "#D6604DED"
 asex_blue <- "#92C5DECD"
+
+pair_labels <- c(expression(italic("T. douglasi / T. poppensis")),
+                 expression(italic("T. shepardi / T. californicum")),
+                 expression(italic("T. monikensis / T. cristinae")),
+                 expression(italic("T. tahoe / T. barmani")),
+                 expression(italic("T. genevieve / T. podura")))
+
+timema_labels <- c(expression(italic("T. douglasi")) , expression(italic("T. poppensis")),
+                   expression(italic("T. shepardi")) , expression(italic("T. californicum")),
+                   expression(italic("T. monikensis")) , expression(italic("T. cristinae")),
+                   expression(italic("T. tahoe")) , expression(italic("T. barmani")),
+                   expression(italic("T. genevieve")) , expression(italic("T. podura")))
