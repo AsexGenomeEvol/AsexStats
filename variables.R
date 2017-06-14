@@ -27,3 +27,5 @@ timema_labels <- c(expression(italic("T. douglasi")) , expression(italic("T. pop
                    expression(italic("T. monikensis")) , expression(italic("T. cristinae")),
                    expression(italic("T. tahoe")) , expression(italic("T. barmani")),
                    expression(italic("T. genevieve")) , expression(italic("T. podura")))
+
+divergence_times <- c(1.17, 1.32, 1.09, 0.77, 1.88)
