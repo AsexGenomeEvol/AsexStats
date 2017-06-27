@@ -1,4 +1,4 @@
-#### Functions
+## AsexStats : an R package for computing stats of asexual genome evolution. Developed specifically for AsexGenomeEvol project 
 
-[make_data_frame.R](make_data_frame.R) : function that created an empty data.frame from a vector of column names.
-[variables.R](variables.R) : contains commonly used variables in project
+The project is hosted at : https://github.com/AsexGenomeEvol
+
