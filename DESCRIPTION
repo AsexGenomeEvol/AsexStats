@@ -8,6 +8,7 @@ Maintainer: Kamil S. Jaron <kamiljaron@gmail.com>
 Description: The package is built out of need of reusability of R functions between different parts of project
 [AsexGenomeEvol](https://github.com/AsexGenomeEvol)
 License: GPL-3
+LazyData: true
 LazyLoad: yes
 RoxygenNote: 6.0.1
 Suggests: testthat

@@ -2,20 +2,34 @@
 
 The project is hosted at : https://github.com/AsexGenomeEvol
 
-### Content
+### Content of the package
 
+I will categorize functions by type (project specific will be somehow marked as well)
 
+#### loading functions
 
+`load_thetas` - function for loading thetas within [variant_analysis](https://github.com/AsexGenomeEvol/variant_analysis)
+
+#### plotting functions
+
+`sex_legend` - plots a sex/asex legend
+
+#### data & variables
+
+`species_pairs` - useful descriptors of species pairs (labels, divergence_times, ...)
+`timemas` - timema species labels stored in a list (codes, labels, ...)
+`asex_blue`, `sex_red` - colours used for asexual and sexual species
+
+#### misc
 
 ### Install
 
 - get the package (clone or download the latest code)
-- start `R`
-- run `install.packages("./AsexStats", repos = NULL, type="source")`
+- open terminal in the folder of the package and run `Rscript install.R`
 
-or install `devtools` package, run `R` and type
+or using `devtools` package, run `R` and type
 
-```
+```{R}
 library(devtools)
 install_github("AsexGenomeEvol/AsexStats", build_vignettes=FALSE)
 ```
