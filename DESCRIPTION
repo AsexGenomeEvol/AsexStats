@@ -1,0 +1,13 @@
+Package: AsexStats
+Type: Package
+Title: The handy functions for analysis of asexual arthropods
+Version: 0.01
+Date: 2017-07-01
+Author: Kamil S. Jaron <kamiljaron@gmail.com>
+Maintainer: Kamil S. Jaron <kamiljaron@gmail.com>
+Description: The package is built out of need of reusability of R functions between different parts of project
+[AsexGenomeEvol](https://github.com/AsexGenomeEvol)
+License: GPL-3
+LazyLoad: yes
+RoxygenNote: 6.0.1
+Suggests: testthat
