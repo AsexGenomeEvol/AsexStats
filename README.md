@@ -8,24 +8,23 @@ I will categorize functions by type (project specific will be somehow marked as 
 
 #### loading functions
 
-`load_thetas` - function for loading thetas within [variant_analysis](https://github.com/AsexGenomeEvol/variant_analysis)
+- `load_thetas` - function for loading thetas within [variant_analysis](https://github.com/AsexGenomeEvol/variant_analysis)
 
 #### plotting functions
 
-`sex_legend` - plots a sex/asex legend
+- `sex_legend` - plots a sex/asex legend
 
 #### data & variables
 
-`species_pairs` - useful descriptors of species pairs (labels, divergence_times, ...)
-`timemas` - timema species labels stored in a list (codes, labels, ...)
-`asex_blue`, `sex_red` - colours used for asexual and sexual species
+- `species_pairs` - useful descriptors of species pairs (labels, divergence_times, ...)
+- `timemas` - timema species labels stored in a list (codes, labels, ...)
+- `asex_blue`, `sex_red` - colours used for asexual and sexual species
 
-#### misc
 
 ### Install
 
 - get the package (clone or download the latest code)
-- open terminal in the folder of the package and run `Rscript install.R`
+- open terminal in the folder of the package and run `Rscript install.R`,
 
 or using `devtools` package, run `R` and type
 
@@ -33,3 +32,10 @@ or using `devtools` package, run `R` and type
 library(devtools)
 install_github("AsexGenomeEvol/AsexStats", build_vignettes=FALSE)
 ```
+
+## Development
+
+- testing is planned, not done yet (using `testthat` I guess)
+- documentation is generated using `devtools` and `roxygen2`
+- use command `make` for rebuilding package - it automatically detects updates of integrated datasets/variables.
+- use branches for development of the new features
