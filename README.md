@@ -37,5 +37,5 @@ install_github("AsexGenomeEvol/AsexStats", build_vignettes=FALSE)
 
 - testing is planned, not done yet (using `testthat` I guess)
 - documentation is generated using `devtools` and `roxygen2`
-- use command `make` for rebuilding package - it automatically detects updates of integrated datasets/variables.
+- you can use `make` for rebuilding package - however, the Makefile is not fully portable (yet?)
 - use branches for development of the new features
