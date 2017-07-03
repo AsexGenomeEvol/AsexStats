@@ -1,4 +1,4 @@
-#' Plot
+#' Plot sex legend
 #'
 #' This function plots a legend with sexual and sexual colours / symbols
 #'
