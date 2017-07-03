@@ -2,7 +2,7 @@
 % Please edit documentation in R/sex_legend.R
 \name{sex_legend}
 \alias{sex_legend}
-\title{Plot}
+\title{Plot sex legend}
 \usage{
 sex_legend(pos = "topright", cex = 1.3)
 }
