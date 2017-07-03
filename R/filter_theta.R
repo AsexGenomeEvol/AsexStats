@@ -32,7 +32,7 @@ filter_theta <- function(sp_data,
     }
     if(filt_window_size){
         #nrow(sp_data)
-        sp_data <- sp_data[(sp_data$end - sp_data$start) == window_size,]
+        sp_data <- sp_data[(sp_data$end - sp_data$start) >= window_size,]
     }
     sp_data <- sp_data[!is.na(sp_data$theta_MLE),]
     #nrow(sp_data)
