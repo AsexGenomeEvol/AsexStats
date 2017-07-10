@@ -39,3 +39,11 @@ install_github("AsexGenomeEvol/AsexStats", build_vignettes=FALSE)
 - documentation is generated using `devtools` and `roxygen2`
 - you can use `make` for rebuilding package - however, the Makefile is not fully portable (yet?)
 - use branches for development of the new features
+
+## Adding new data
+
+- create an R script (`*.R`) in folder `data-raw` that will generate a `*.rdata` data file in `data` folder
+- add the name of data/scripts in `R/data.R` (use one of previous entries as template)
+- add the name to VARIABLES in the `Makefile`
+- document and reinstall package
+- before making a commit, check that data look as expected and check if the documentation of data (`?mydata`) looks as expected

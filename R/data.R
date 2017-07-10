@@ -1,20 +1,30 @@
-#' Species pairs
+#' Timema species pairs
 #'
-#' DESC
+#' a useful variables and information related to species pairs :
+#' \itemize{
+#'   \item `labels` - a vector of expressions;
+#'   \item `JK-divergence` - divergences between pairs are calculated from transcriptomes;
+#' }
 #'
-#' @format a list of useful pair info
-#' (pairs are sorted by age Timema pairs, mite pairs, Ostracod pairs)
+#' @format a list
+#' (pairs are sorted by divergence of Timema pairs)
 #'
 #' @examples
-#' species_pairs$labels # returns a vector of pair labels
-"species_pairs"
+#' timema_pairs$labels # returns a vector of pair labels
+"timema_pairs"
 
 #' Timema info
 #'
-#' DESC
+#' a useful variables and information related to Timema species :
+#' \itemize{
+#'   \item `timema_codes`
+#'   \item `timema_names`
+#'   \item `labels` - a vector of expressions;
+#'   \item `short_labels`
+#' }
 #'
-#' @format a list of useful Timema species info
-#' interleaved asexual and sexual sister species
+#' @format a list
+#' interleaved asexual and sexual sister species with pairs sorted by divergences
 #'
 #' @examples
 #' timemas$labels # returns a vector of formated timema labels
