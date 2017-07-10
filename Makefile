@@ -1,7 +1,7 @@
-VARIABLES := timemas timema_pairs sex_red asex_blue
-DATA_FILES := $(patsubst %, data/%.rdata, $(VARIABLES))
+VARIABLES = timemas timema_pairs sex_red asex_blue
+DATA_FILES = $(patsubst %, data/%.rdata, $(VARIABLES))
 # replace path by Rscript -e "noquote(.libPaths())" | tail -1 | cut -f 2 -d ' '
-INSTALLATION := /Library/Frameworks/R.framework/Versions/3.3/Resources/library/AsexStats
+INSTALLATION = /Library/Frameworks/R.framework/Versions/3.3/Resources/library/AsexStats
 
 .PHONY : install
 install : $(INSTALLATION)

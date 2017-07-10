@@ -1,6 +1,6 @@
-#' Plot sex legend
+#' Filter theta estimates
 #'
-#' This function plots a legend with sexual and sexual colours / symbols
+#' This function can filter theta dataframe by coverage, window size or both
 #'
 #' @param sp_data data frame with theta estimates
 #'
@@ -15,10 +15,9 @@
 #'
 #' @export
 
-
-filter_theta <- function(sp_data,
-                         min_cov = 0.5, filt_cov = T,
-                         window_size = 999, filt_window_size = T){
+filter_thetas <- function(sp_data,
+                          min_cov = 0.5, filt_cov = T,
+                          window_size = 999, filt_window_size = T){
     # would be probably faster to do it using one call only,
     # this will copy the table in memory 4 times, but it probably does not really matter
     # at some point I would like to report filtering steps

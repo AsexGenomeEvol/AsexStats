@@ -1,6 +1,7 @@
 plot_log_hist <- function(sex_data, asex_data, xlim = NA,
                           xlab = 'Scafold size', breaks = 80, barwidth = 13,
-                          col = c("#D6604DED", "#92C5DECD"), noborder = F, axes = T){
+                          col = c("#D6604DED", "#92C5DECD"), noborder = F, axes = T,
+                          cex.axis = 2, cex.lab = 1.6){
   sex_red <- col[1]
   asex_blue <- col[2]
 
@@ -24,8 +25,8 @@ plot_log_hist <- function(sex_data, asex_data, xlim = NA,
        xlim = xlim,
        ylim = c(0, max(log10(cont_hist$counts),log10(cont_hist2$counts))),
        col = sex_red,
-       cex.axis = 2,
-       cex.lab = 1.6,
+       cex.axis = cex.axis,
+       cex.lab = cex.lab,
        las = 1,
        axes = axes,
        bty = "n")
