@@ -8,7 +8,7 @@ I will categorize functions by type (project specific will be somehow marked as 
 
 #### loading functions
 
-- `load_thetas` - function for loading thetas within [variant_analysis](https://github.com/AsexGenomeEvol/variant_analysis)
+- `filter_thetas` - function for filtering thetas
 
 #### plotting functions
 
@@ -16,7 +16,7 @@ I will categorize functions by type (project specific will be somehow marked as 
 
 #### data & variables
 
-- `species_pairs` - useful descriptors of species pairs (labels, divergence_times, ...)
+- `timema_pairs` - useful descriptors of species pairs (labels, divergence_times, ...)
 - `timemas` - timema species labels stored in a list (codes, labels, ...)
 - `asex_blue`, `sex_red` - colours used for asexual and sexual species
 
@@ -35,10 +35,10 @@ install_github("AsexGenomeEvol/AsexStats", build_vignettes=FALSE)
 
 ## Development
 
-- testing is planned, not done yet (using `testthat` I guess)
+- testing is done using `testthat` and it is integrated to installation (if test wont pass, installation fails)
 - documentation is generated using `devtools` and `roxygen2`
-- you can use `make` for rebuilding package - however, the Makefile is not fully portable (yet?)
-- use branches for development of the new features
+- you can use `make` for rebuilding package - however, the Makefile is not fully portable  (yet?), you need to modify path to your R package inside of the makefile.
+- use branches and pull requests for development of the new features
 
 ## Adding new data
 

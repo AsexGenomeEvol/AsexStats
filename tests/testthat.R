@@ -1,4 +1,4 @@
 library(testthat)
-#library(AsexStats)
+library(AsexStats)
 
 test_package("AsexStats")
