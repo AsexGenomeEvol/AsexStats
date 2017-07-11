@@ -1,4 +1,35 @@
-# ADD COPYRIGHT and LICENCE TO ORIGINAL REPO
+#' Plot smoothed distribution
+#'
+#' @param x data vector to plot
+#'
+#' @param ... additional data vectors
+#'
+#' @param range a coefficient to calculate the upper/lower adjacent values
+#'
+#' @param h smoothing coefficient [estimated form data]
+#'
+#' @param add logical. if FALSE a new plot is created [F]
+#'
+#' @param at where to plot distributions
+#'
+#' @param wex relative expansion of the distributions. [1]
+#'
+#' @param horizontal logical. horizontal or vertical distributions [F]
+#'
+#' @param side 'left', 'right' or 'both' (violin plot). ['both']
+#'
+#' @param names one label, or a vector of labels for the datas must match the number of datas given
+#'
+#' @param ylim, , rectCol, colMed, pchMed, drawRect - graphical details (mostly same as in default Graphics)
+#'
+#' @param col, border, lty, lwd - Graphical parameters for the violin passed to lines and polygon
+#'
+#' @export
+
+# Copyright Daniel Adler, Max Joseph, Kamil S. Jaron
+# BSD licence
+# modification of https://gist.github.com/mbjoseph/5852613
+# original package https://cran.r-project.org/web/packages/vioplot/vioplot.pdf
 
 vioplot2 <- function (x, ..., range = 1.5, h = NULL, ylim = NULL, names = NULL,
                       horizontal = FALSE, col = "magenta", border = "black", lty = 1,
