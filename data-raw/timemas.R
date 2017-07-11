@@ -23,10 +23,17 @@ timema_short_labels <- c(expression(italic("Tte")) , expression(italic("Tbi")),
                          expression(italic("Tsi")) , expression(italic("Tcm")),
                          expression(italic("Tge")) , expression(italic("Tpa")))
 
+timema_optimal_kmer <- c(81, 81,
+                         89, 83,
+                         87, 83,
+                         87, 83,
+                         87, 65)
+
 timemas <- list(codes = timema_codes,
                 names = timema_names,
                 labels = timema_labels,
-                short_labels = timema_short_labels)
+                short_labels = timema_short_labels,
+                optimal_kmer = timema_optimal_kmer)
 
 
 save(timemas, file = "data/timemas.rdata")

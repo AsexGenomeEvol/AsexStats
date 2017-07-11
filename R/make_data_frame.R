@@ -1,5 +1,8 @@
-# Create a data.frame
-# using column names defined by a string vector
+#' Create a data.frame with defined variable names
+#'
+#' @param variables a vector of veriable names
+#'
+#' @export
 
 make_data_frame <- function(variables){
   asm_template <- matrix(ncol = length(variables))
