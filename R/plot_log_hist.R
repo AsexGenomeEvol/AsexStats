@@ -1,9 +1,23 @@
+#' Plot log histogram with sex / asex overlaping data
+#'
+#' @param sex_data a vector of sex data (must be numeric)
+#'
+#' @param asex_data a vector of asex data
+#'
+#' @param xlim [from data], xlab ['Scafold size'], cex.axis [2], cex.lab [1.6] inherited form \code{plot}
+#'
+#' @param breaks [80] inherited from \code{hist}
+#'
+#' @param barwidth width of histogram bars (I have not managed to make it perfectly automated) [13]
+#'
+#' @param axes logical if to plot axis [T]
+#'
+#' @export
+
 plot_log_hist <- function(sex_data, asex_data, xlim = NA,
                           xlab = 'Scafold size', breaks = 80, barwidth = 13,
-                          col = c("#D6604DED", "#92C5DECD"), noborder = F, axes = T,
+                          noborder = F, axes = T,
                           cex.axis = 2, cex.lab = 1.6){
-  sex_red <- col[1]
-  asex_blue <- col[2]
 
   cont_hist <- hist(sex_data, plot = F, breaks = breaks)
   cont_hist2 <- hist(asex_data, plot = F, breaks = breaks)

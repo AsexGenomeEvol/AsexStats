@@ -13,6 +13,12 @@ I will categorize functions by type (project specific will be somehow marked as 
 #### plotting functions
 
 - `sex_legend` - plots a sex/asex legend
+- `plot_log_hist` - plots y-log histogram of sex/asex data
+
+#### Misc
+
+- `ssplit` - split a string into vector of substring
+- `make_data_frame` - create a data.frame with predefined column names
 
 #### data & variables
 
