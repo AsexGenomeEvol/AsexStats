@@ -24,6 +24,7 @@
 #'
 #' @param col, border, lty, lwd - Graphical parameters for the violin passed to lines and polygon
 #'
+#' @importFrom sm sm.density
 #' @export
 
 # Copyright Daniel Adler, Max Joseph, Kamil S. Jaron
