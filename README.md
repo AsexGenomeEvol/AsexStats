@@ -39,6 +39,25 @@ library(devtools)
 install_github("AsexGenomeEvol/AsexStats", build_vignettes=FALSE)
 ```
 
+#### local installation
+
+Users on clusters classically do not have a root access and therefore they won't be able to install R packages to the common folders of all the users. To access an R package without root access you need to install the package on some alternative place (like your home) and tell R that there will be an alternative place to look for packages.
+
+The very beginning is the same, download this package, then create a place for your local R packages (`/home/$USER/R` in this example).
+
+```
+cd ~
+git clone https://github.com/AsexGenomeEvol/AsexStats
+mkdir -p /home/$USER/R
+CMD INSTALL AsexStats -l /home/$USER/R
+```
+
+Now the package was installed to your home (`~/R`). To tell R about the alternative path you set an environmental variable by adding the line `export R_LIBS=/home/$USER/R` into your `.bashrc` file (the setting file of your `bash`)
+
+```
+echo "export R_LIBS=/home/$USER/R" >> ~/.bashrc
+```
+
 ## Development
 
 - testing is done using `testthat` and it is integrated to installation (if test wont pass, installation fails)
