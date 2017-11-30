@@ -23,6 +23,12 @@ timema_short_labels <- c(expression(italic("Tte")) , expression(italic("Tbi")),
                          expression(italic("Tsi")) , expression(italic("Tcm")),
                          expression(italic("Tge")) , expression(italic("Tpa")))
 
+timema_latex_labels <- c("\\textcolor{asex_blue}{\\textit{tahoe}}","\\textcolor{sex_red}{\\textit{bartmani}}",
+                         "\\textcolor{asex_blue}{\\textit{monikensis}}","\\textcolor{sex_red}{\\textit{cristinae}}",
+                         "\\textcolor{asex_blue}{\\textit{douglasi}}","\\textcolor{sex_red}{\\textit{poppensis}}",
+                         "\\textcolor{asex_blue}{\\textit{shepardi}}","\\textcolor{sex_red}{\\textit{californicum}}",
+                         "\\textcolor{asex_blue}{\\textit{genevievae}}", "\\textcolor{sex_red}{\\textit{podura}}")
+
 timema_optimal_kmer <- c(81, 81,
                          89, 83,
                          87, 83,
