@@ -1,13 +1,13 @@
 #' Filter theta estimates
 #'
-#' This function can filter theta dataframe by coverage, window size or both
+#' This function can filter theta dataframe by coverage (depth), window size or both
 #'
 #' @param sp_data data frame with theta estimates
 #'
-#' @param min_cov sets treshold for coverage filtering,
+#' @param min_cov sets treshold for depth filtering,
 #' only windows with cov in (min_cov * median, (1 + min_cov) * median) will be kept [0.5]
 #'
-#' @param filt_cov if to filter by coverage [True]
+#' @param filt_cov if to filter by depth [True]
 #'
 #' @param window_size the minimal size of a window to keep [999]
 #'
@@ -24,9 +24,9 @@ filter_thetas <- function(sp_data,
 
     #nrow(sp_data)
     if(filt_cov){
-        sp_data <- sp_data[sp_data$coverage > median(sp_data$coverage) * min_cov,]
+        sp_data <- sp_data[sp_data$depth > median(sp_data$depth) * min_cov,]
         #nrow(sp_data)
-        sp_data <- sp_data[sp_data$coverage < (median(sp_data$coverage) * (1 + min_cov)),]
+        sp_data <- sp_data[sp_data$depth < (median(sp_data$depth) * (1 + min_cov)),]
         #nrow(sp_data)
     }
     if(filt_window_size){

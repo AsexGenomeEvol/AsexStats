@@ -10,15 +10,15 @@ filter_thetas(sp_data, min_cov = 0.5, filt_cov = T, window_size = 999,
 \arguments{
 \item{sp_data}{data frame with theta estimates}
 
-\item{min_cov}{sets treshold for coverage filtering,
+\item{min_cov}{sets treshold for depth filtering,
 only windows with cov in (min_cov * median, (1 + min_cov) * median) will be kept [0.5]}
 
-\item{filt_cov}{if to filter by coverage [True]}
+\item{filt_cov}{if to filter by depth [True]}
 
 \item{window_size}{the minimal size of a window to keep [999]}
 
 \item{filt_window_size}{if to filter by window size [True]}
 }
 \description{
-This function can filter theta dataframe by coverage, window size or both
+This function can filter theta dataframe by coverage (depth), window size or both
 }
