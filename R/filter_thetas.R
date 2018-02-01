@@ -21,6 +21,9 @@ filter_thetas <- function(sp_data,
     # would be probably faster to do it using one call only,
     # this will copy the table in memory 4 times, but it probably does not really matter
     # at some point I would like to report filtering steps
+    if ( all(is.na(sp_data)) ){
+        return(NA)
+    }
 
     #nrow(sp_data)
     if(filt_cov){
