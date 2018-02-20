@@ -35,11 +35,17 @@ timema_optimal_kmer <- c(81, 81,
                          87, 83,
                          87, 65)
 
+cols <- c('#a6bddb', '#fc9272',
+          '#74a9cf', '#fb6a4a',
+		  '#3690c0', '#ef3b2c',
+		  '#0570b0', '#cb181d',
+		  '#045a8d', '#a50f15')
+
 timemas <- list(codes = timema_codes,
                 names = timema_names,
                 labels = timema_labels,
                 short_labels = timema_short_labels,
-                optimal_kmer = timema_optimal_kmer)
-
+                optimal_kmer = timema_optimal_kmer,
+                cols = cols)
 
 save(timemas, file = "data/timemas.rdata")
