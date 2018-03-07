@@ -1,4 +1,4 @@
-#' Filter theta estimates
+#' Load Mummer Coords file
 #'
 #' This function can filter theta dataframe by coverage (depth), window size or both
 #'
@@ -18,6 +18,7 @@ load_mummer_coords <- function(f, lg = NA, ord = NA){
 
     aln <- sqldf("select * from f", dbname = tempfile(),
                  file.format = list(sep = '\t', filter = grep_cmd))
+    close(f)
     colnames(aln) <- c('r_start', 'r_end', 'q_start', 'q_end', 'r_aln_len', 'q_aln_len',
                        'identity', 'r_len', 'q_len', 'r_cov', 'q_cov', 'r_name', 'q_name')
 

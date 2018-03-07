@@ -2,7 +2,7 @@
 % Please edit documentation in R/load_mummer_coords.R
 \name{load_mummer_coords}
 \alias{load_mummer_coords}
-\title{Filter theta estimates}
+\title{Load Mummer Coords file}
 \usage{
 load_mummer_coords(f, lg = NA, ord = NA)
 }

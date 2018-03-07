@@ -2,7 +2,7 @@
 % Please edit documentation in R/adjust_name.R
 \name{adjust_name}
 \alias{adjust_name}
-\title{Adjust a string bu a symbol, motivated by fixing names of linkage groups for grepping (lg1 would grep lg10 as well)}
+\title{Adjust a string by a symbol, motivated by fixing names of linkage groups for grepping (lg1 would grep lg10 as well)}
 \usage{
 adjust_name(name, length, symbol = "_")
 }
@@ -14,5 +14,5 @@ adjust_name(name, length, symbol = "_")
 \item{symbol}{for extension. Default : '_'}
 }
 \description{
-Adjust a string bu a symbol, motivated by fixing names of linkage groups for grepping (lg1 would grep lg10 as well)
+Adjust a string by a symbol, motivated by fixing names of linkage groups for grepping (lg1 would grep lg10 as well)
 }
