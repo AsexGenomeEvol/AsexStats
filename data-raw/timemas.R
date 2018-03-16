@@ -5,13 +5,13 @@ timema_codes <- c("4_Tte", "4_Tbi",
                   "2_Tsi", "2_Tcm",
                   "5_Tge", "5_Tpa")
 
-timema_names <- c("T. tahoe", "T. barmani",
+timema_names <- c("T. tahoe", "T. bartmani",
                   "T. monikensis", "T. cristinae",
                   "T. douglasi", "T. poppensis",
                   "T. shepardi", "T. californicum",
                   "T. genevieve", "T. podura")
 
-timema_labels <- c(expression(italic("T. tahoe")) , expression(italic("T. barmani")),
+timema_labels <- c(expression(italic("T. tahoe")) , expression(italic("T. bartmani")),
                    expression(italic("T. monikensis")) , expression(italic("T. cristinae")),
                    expression(italic("T. douglasi")) , expression(italic("T. poppensis")),
                    expression(italic("T. shepardi")) , expression(italic("T. californicum")),

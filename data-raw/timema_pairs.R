@@ -1,4 +1,4 @@
-timema_pair_labels <- c(expression(italic("T. tahoe / T. barmani")),
+timema_pair_labels <- c(expression(italic("T. tahoe / T. bartmani")),
                  expression(italic("T. monikensis / T. cristinae")),
                  expression(italic("T. douglasi / T. poppensis")),
                  expression(italic("T. shepardi / T. californicum")),
