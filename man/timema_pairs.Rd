@@ -4,8 +4,10 @@
 \name{timema_pairs}
 \alias{timema_pairs}
 \title{Timema species pairs}
-\format{a list
-(pairs are sorted by divergence of Timema pairs)}
+\format{
+a list
+(pairs are sorted by divergence of Timema pairs)
+}
 \usage{
 timema_pairs
 }

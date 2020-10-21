@@ -4,7 +4,9 @@
 \name{asex_blue}
 \alias{asex_blue}
 \title{A blue colour used for asexual species}
-\format{string}
+\format{
+string
+}
 \usage{
 asex_blue
 }

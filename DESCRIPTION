@@ -6,9 +6,9 @@ Date: 2017-07-01
 Author: Kamil S. Jaron <kamiljaron@gmail.com>
 Maintainer: Kamil S. Jaron <kamiljaron@gmail.com>
 Description: The package is built out of need of reusability of R functions between different parts of project.
-[AsexGenomeEvol](https://github.com/AsexGenomeEvol)
+[AsexGenomeEvol](https: //github.com/AsexGenomeEvol)
 License: GPL-3
 LazyData: true
 LazyLoad: yes
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1
 Suggests: testthat

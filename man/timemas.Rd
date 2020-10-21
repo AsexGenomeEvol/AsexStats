@@ -4,8 +4,10 @@
 \name{timemas}
 \alias{timemas}
 \title{Timema info}
-\format{a list
-interleaved asexual and sexual sister species with pairs sorted by divergences}
+\format{
+a list
+interleaved asexual and sexual sister species with pairs sorted by divergences
+}
 \usage{
 timemas
 }

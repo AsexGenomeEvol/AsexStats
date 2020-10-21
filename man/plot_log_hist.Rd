@@ -4,9 +4,18 @@
 \alias{plot_log_hist}
 \title{Plot log histogram with sex / asex overlaping data}
 \usage{
-plot_log_hist(sex_data, asex_data, xlim = NA, xlab = "Scafold size",
-  breaks = 80, barwidth = 13, noborder = F, axes = T, cex.axis = 2,
-  cex.lab = 1.6)
+plot_log_hist(
+  sex_data,
+  asex_data,
+  xlim = NA,
+  xlab = "Scafold size",
+  breaks = 80,
+  barwidth = 13,
+  noborder = F,
+  axes = T,
+  cex.axis = 2,
+  cex.lab = 1.6
+)
 }
 \arguments{
 \item{sex_data}{a vector of sex data (must be numeric)}
